@@ -3,15 +3,26 @@
   margin: 0;
 }
 
-body {
-  /* background-color: #0f172a; */
-}
-
 .marker-container {
-  width: 70%;
   height: 600px;
+  width: 70%;
   margin: auto;
   margin-top: 5rem;
+}
+
+.customer-density-text {
+display: flex;
+justify-content: right;
+align-items: center;
+gap: 0.5rem;
+}
+
+.customer-density-text span {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 3px solid blue;
+  background-color: #c2bfed;
 }
 
 /* map styling */
