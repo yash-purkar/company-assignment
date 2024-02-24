@@ -2,17 +2,28 @@ import "./App.css";
 import "leaflet/dist/leaflet.css";
 import { Map } from "./components/map/Map";
 import { useState } from "react";
+import { SalesFunnel } from "./components/salesFunnel/SalesFunnel";
 
 function App() {
-  const [currentTab, setCurrentTab] = useState("map");
+  const [currentTab, setCurrentTab] = useState("sales");
 
   return (
     <div>
       <div className="tabs-container">
-        <buton onClick={() => setCurrentTab("map")} className={`tab-button ${currentTab === "map" && "active-tab"}`}>Map</buton>
-        <buton onClick={() => setCurrentTab("sales")} className={`tab-button ${currentTab === "sales" && "active-tab"}`}>Sales</buton>
+        <buton
+          onClick={() => setCurrentTab("map")}
+          className={`tab-button ${currentTab === "map" && "active-tab"}`}
+        >
+          Map
+        </buton>
+        <buton
+          onClick={() => setCurrentTab("sales")}
+          className={`tab-button ${currentTab === "sales" && "active-tab"}`}
+        >
+          Sales
+        </buton>
       </div>
-      <Map />
+      {currentTab === "map" ? <Map /> : <SalesFunnel />}
     </div>
   );
 }
