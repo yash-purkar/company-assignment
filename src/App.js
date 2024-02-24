@@ -5,7 +5,7 @@ import { useState } from "react";
 import { SalesFunnel } from "./components/salesFunnel/SalesFunnel";
 
 function App() {
-  const [currentTab, setCurrentTab] = useState("sales");
+  const [currentTab, setCurrentTab] = useState("map");
 
   return (
     <div>
