@@ -50,14 +50,28 @@ body {
 }
 
 /* sales funnel */
+.heading-container {
+  width: 40%;
+  margin: 5rem auto 1rem auto;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  color: #6885e7;
+  background-color: #dee6ff;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
 
 .sales-funnel-container {
-  width: 50%;
-  height: 600px;
+  min-width: 720px;
+  width: 40%;
   margin: auto;
-  margin-top: 5rem;
-  display: flex;gap: 0.3rem;
-  height: 20rem;
+  height: 30rem;
   background: linear-gradient(
     to right,
     #93c5fd47,
@@ -67,6 +81,12 @@ body {
     #93c5fd0f
   );
 }
+
+.sales-info {
+  display: flex;
+  gap: 0.3rem;
+}
+
 .column {
   width: 10rem;
 }
@@ -100,4 +120,70 @@ body {
 .count {
   font-weight: bold;
   font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+.trend-info {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 2rem;
+}
+.up-trend-text {
+  color: #26a055;
+  font-weight: bold;
+}
+.up-trend-icon {
+  color: #26a055;
+  background-color: #c2e8d1;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+.down-trend-info span {
+  color: #26a055;
+  font-weight: bold;
+}
+.down-trend-icon {
+  color: #e03d3f;
+  background-color: #edd2df;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+.down-trend-text {
+  color: #e03d3f;
+  font-weight: bold;
+}
+
+/* funnel */
+
+.funnel-boxes {
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  width: 160.36px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.box-1 {
+  height: 10rem;
+  background-color: #3561fe;
+}
+.box-2 {
+  height: 5rem;
+  background-color: #456efc;
+}
+.box-3 {
+  height: 3.5rem;
+  background-color: #5d80fe;
+}
+.box-4 {
+  height: 2.5rem;
+  background-color: #95aaff;
+}
+.box-5 {
+  height: 1.5rem;
+  background-color: #b9c9fc;
 }
