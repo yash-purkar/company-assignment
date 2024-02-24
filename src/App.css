@@ -3,7 +3,14 @@
   margin: 0;
 }
 
+.marker-container{
+  width: 70%;
+  height: 600px;
+  margin: auto;
+  margin-top: 10rem;
+}
+
 /* map styling */
 .leaflet-container{
-  height: 100vh;
+  height: 100%;
 }
