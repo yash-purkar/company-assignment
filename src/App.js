@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "leaflet/dist/leaflet.css";
+import { Map } from "./components/map/Map";
+import { useState } from "react";
+import { SalesFunnel } from "./components/salesFunnel/SalesFunnel";
 
 function App() {
+  const [currentTab, setCurrentTab] = useState("sales");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <div className="tabs-container">
+        <buton
+          onClick={() => setCurrentTab("map")}
+          className={`tab-button ${currentTab === "map" && "active-tab"}`}
         >
-          Learn React
-        </a>
-      </header>
+          Map
+        </buton>
+        <buton
+          onClick={() => setCurrentTab("sales")}
+          className={`tab-button ${currentTab === "sales" && "active-tab"}`}
+        >
+          Sales
+        </buton>
+      </div>
+      {currentTab === "map" ? <Map /> : <SalesFunnel />}
     </div>
   );
 }
 
 export default App;
+
+// MarkerContainer - Container for the map
+// TileLayer - Skin of the map.
+// MarkerGroupCluster - Group for markers
+// Marker - Marker visible on the map
+// PopUp - Popup for the each marker

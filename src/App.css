@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  /* background-color: #0f172a; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.marker-container {
+  width: 70%;
+  height: 600px;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+/* map styling */
+.leaflet-container {
+  border-radius: 1rem;
+  height: 100%;
+}
+
+/* tab buttons */
+.tabs-container {
+  width: fit-content;
+  margin: auto;
+  margin-top: 5rem;
+}
+.tab-button {
+  border: 1px solid #0f172a;
+  color: #0f172a;
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 1rem;
+  display: block;
+}
+
+.active-tab {
+  color: #fff;
+  border: 1px solid #0f172a;
+  background-color: #0f172a;
+}
+
+@media (min-width: 720px) {
+  .tab-button {
+    display: inline;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* sales funnel */
+
+.sales-funnel-container {
+  width: 50%;
+  height: 600px;
+  margin: auto;
+  margin-top: 5rem;
+  display: flex;gap: 0.3rem;
+  height: 20rem;
+  background: linear-gradient(
+    to right,
+    #93c5fd47,
+    #93c5fd36,
+    #93c5fd29,
+    #93c5fd1c,
+    #93c5fd0f
+  );
+}
+.column {
+  width: 10rem;
+}
+.column-top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 2px solid #2563eb;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line {
+  width: 100%;
+  border: 1.3px dashed lightgray;
+}
+
+.column-name {
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.count {
+  font-weight: bold;
+  font-size: 1.3rem;
 }
