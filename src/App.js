@@ -1,6 +1,7 @@
+import { Icon } from "leaflet";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 // Markers on the map
 const markers = [
@@ -18,6 +19,12 @@ const markers = [
   }
 ];
 
+// Creating icon for custom marker
+const cusotomMarker = new Icon({
+  iconUrl: require('./assets/marker-icon.png'),
+  iconSize:[38,38]
+})
+
 function App() {
   return <MapContainer center={[48.8566,2.3522]} zoom={13}>
     <TileLayer
@@ -25,7 +32,9 @@ function App() {
        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {
-        markers.map(marker => <Marker position={marker.geocode}></Marker>)
+        markers.map((marker,i) => <Marker key={i} position={marker.geocode} icon={cusotomMarker}>
+          <Popup>{marker.popUp}</Popup>
+        </Marker>)
       }
   </MapContainer>;
 }
