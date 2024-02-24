@@ -1,55 +1,86 @@
 import React from "react";
+import { CiFilter } from "react-icons/ci";
+import { FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
 
 export const SalesFunnel = () => {
   return (
-    <div class="sales-funnel-container">
-      <div className="column">
-        <div className="column-top">
-          <div className="circle"></div>
-          <div className="line"></div>
-        </div>
-        <div>
-          <h2 className="column-name">Impressions</h2>
-          <h3 className="count">867.4k</h3>
-        </div>
+    <div className="sales-main-container">
+      <div className="heading-container">
+        <CiFilter className="icon" />
+        <h2 className="heading">Sales Funnel</h2>
       </div>
-      <div className="column">
-        <div className="column-top">
-          <div className="circle"></div>
-          <div className="line"></div>
+      <div className="sales-funnel-container">
+        <div className="sales-info">
+          {data.map((data) => (
+            <div className="column" key={data.columnName}>
+              <div className="column-top">
+                <div className="circle"></div>
+                <div className="line"></div>
+              </div>
+              <div>
+                <h2 className="column-name">{data.columnName}</h2>
+                <h3 className="count">{data.count}</h3>
+                <div className="trend-info">
+                {
+                  data.upTrend ? <FaArrowTrendUp className="up-trend-icon" /> : <FaArrowTrendDown className="down-trend-icon" />
+                }
+                  {" "}
+                  <span
+                    className={
+                      data.upTrend ? "up-trend-text" : "down-trend-text"
+                    }
+                  >
+                    {data.percentage}%
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-        <div>
-          <h2 className="column-name">Engagement</h2>
-          <h3 className="count">118k</h3>
-        </div>
-      </div> <div className="column">
-        <div className="column-top">
-          <div className="circle"></div>
-          <div className="line"></div>
-        </div>
-        <div>
-          <h2 className="column-name">Visits</h2>
-          <h3 className="count">4.29k</h3>
-        </div>
-      </div> <div className="column">
-        <div className="column-top">
-          <div className="circle"></div>
-          <div className="line"></div>
-        </div>
-        <div>
-          <h2 className="column-name">Add To Carts</h2>
-          <h3 className="count">984</h3>
-        </div>
-      </div> <div className="column">
-        <div className="column-top">
-          <div className="circle"></div>
-          <div className="line"></div>
-        </div>
-        <div>
-          <h2 className="column-name">Conversions</h2>
-          <h3 className="count">49</h3>
+
+        {/* funnel */}
+        <div className="funnel-boxes">
+          <div className="box box-1"></div>
+          <div className="box box-2"></div>
+          <div className="box box-3"></div>
+          <div className="box box-4"></div>
+          <div className="box box-5"></div>
         </div>
       </div>
     </div>
   );
 };
+
+
+const data = [
+  {
+    columnName: "Impression",
+    count: "867.4k",
+    percentage: +75,
+    upTrend: true,
+  },
+  {
+    columnName: "Engagement",
+    count: "118k",
+    percentage: +75,
+    upTrend: true,
+  },
+  {
+    columnName: "Visits",
+    count: "4.29k",
+    percentage: -55,
+    upTrend: false,
+  },
+  {
+    columnName: "Add To Carts",
+    count: "984",
+    percentage: -65,
+    upTrend: false,
+  },
+  {
+    columnName: "Conversions",
+    count: "49",
+    percentage: -75,
+    upTrend: false,
+  },
+];
