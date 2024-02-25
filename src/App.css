@@ -11,10 +11,10 @@
 }
 
 .customer-density-text {
-display: flex;
-justify-content: right;
-align-items: center;
-gap: 0.5rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .customer-density-text span {
@@ -167,34 +167,97 @@ gap: 0.5rem;
 }
 
 /* funnel */
-
-.funnel-boxes {
+.funnel {
+  width: 30rem;
+  margin: auto;
+  height: 720px;
+  margin-top: -15rem;
   display: flex;
+  flex-direction: column;
+  transform: rotate(-90deg);
   align-items: center;
+  gap: 0.3rem;
 }
 
-.box {
-  width: 160.36px;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-.box-1 {
-  height: 10rem;
+.funnel-item-1 {
+  width: 50%;
+  height: 70%;
   background-color: #3561fe;
+  clip-path: polygon(
+    10% 59%,
+    3% 38%,
+    0% 0%,
+    100% 0%,
+    97% 38%,
+    90% 59%,
+    79% 67%,
+    77% 83%,
+    80% 100%,
+    20% 100%,
+    23% 83%,
+    21% 67%
+  );
 }
-.box-2 {
-  height: 5rem;
+
+.funnel-item-2 {
+  width: 50%;
+  height: 70%;
   background-color: #456efc;
+  clip-path: polygon(
+    28% 42%,
+    27% 24%,
+    20% 0%,
+    80% 0%,
+    73% 24%,
+    72% 42%,
+    64% 67%,
+    60% 85%,
+    67% 100%,
+    33% 100%,
+    40% 85%,
+    36% 67%
+  );
 }
-.box-3 {
-  height: 3.5rem;
-  background-color: #5d80fe;
+
+.funnel-item-3 {
+  width: 50%;
+  height: 70%;
+  background-color: #5b7ffe;
+  clip-path: polygon(
+    42% 57%,
+    35% 20%,
+    33% 0%,
+    67% 0%,
+    65% 20%,
+    58% 57%,
+    56% 73%,
+    56% 86%,
+    59% 100%,
+    41% 100%,
+    44% 86%,
+    44% 73%
+  );
 }
-.box-4 {
-  height: 2.5rem;
-  background-color: #95aaff;
+
+.funnel-item-4 {
+  width: 50%;
+  height: 70%;
+  background-color: #94acff;
+  clip-path: polygon(
+    47% 60%,
+    41% 0%,
+    59% 0%,
+    53% 60%,
+    53% 87%,
+    55% 100%,
+    45% 100%,
+    47% 87%
+  );
 }
-.box-5 {
-  height: 1.5rem;
-  background-color: #b9c9fc;
+
+.funnel-item-5 {
+  width: 50%;
+  height: 70%;
+  background-color: #b7c7ff;
+  clip-path: polygon(45% 0%, 55% 0%, 55% 100%, 45% 100%);
 }
