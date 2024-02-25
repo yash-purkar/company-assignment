@@ -21,10 +21,11 @@ export const SalesFunnel = () => {
                 <h2 className="column-name">{data.columnName}</h2>
                 <h3 className="count">{data.count}</h3>
                 <div className="trend-info">
-                {
-                  data.upTrend ? <FaArrowTrendUp className="up-trend-icon" /> : <FaArrowTrendDown className="down-trend-icon" />
-                }
-                  {" "}
+                  {data.upTrend ? (
+                    <FaArrowTrendUp className="up-trend-icon" />
+                  ) : (
+                    <FaArrowTrendDown className="down-trend-icon" />
+                  )}{" "}
                   <span
                     className={
                       data.upTrend ? "up-trend-text" : "down-trend-text"
@@ -39,18 +40,17 @@ export const SalesFunnel = () => {
         </div>
 
         {/* funnel */}
-        <div className="funnel-boxes">
-          <div className="box box-1"></div>
-          <div className="box box-2"></div>
-          <div className="box box-3"></div>
-          <div className="box box-4"></div>
-          <div className="box box-5"></div>
+        <div class="funnel">
+          <div class="funnel-item-1"></div>
+          <div class="funnel-item-2"></div>
+          <div class="funnel-item-3"></div>
+          <div class="funnel-item-4"></div>
+          <div class="funnel-item-5"></div>
         </div>
       </div>
     </div>
   );
 };
-
 
 const data = [
   {

@@ -78,6 +78,12 @@ const locations = [
       popUp: "Maharashtra",
       isLiveTraffic: false,
     },
+    {
+      latitude: 28.7041,
+      longitude: 77.1025,
+      popUp: "Delhi",
+      isLiveTraffic: true,
+    },
   ];
   
 export const useGetTrafficData = () => {
